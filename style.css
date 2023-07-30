@@ -1,0 +1,113 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+#anime-block {
+  animation: hideout 0.2s ease 5.5s forwards;
+}
+#containerAnime{
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#logoAnime{
+  width: 100%;
+  animation: fillIn 0.8s ease 2.5s forwards;
+}
+#horizon{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #efefef;
+  transform: translate(-50%, -50%);
+  width: 0px;
+  height: 2px;
+  background-color: #efefef;
+  animation: horizontal 0.5s ease 4s forwards;
+  z-index: 100;
+}
+#column {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #efefef;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 0px;
+  background-color: #efefef;
+  animation: vertical 0.5s ease 5s forwards;
+  z-index: 100;
+}
+#logoAnime path:first-child {
+  stroke-dasharray: 115%;
+  stroke-dashoffset: 110%;
+  animation: stroky 0.5s ease 0s forwards;
+}
+#logoAnime path:nth-child(2) {
+  stroke-dasharray: 115%;
+  stroke-dashoffset: 110%;
+  animation: stroky 0.5s ease 0.3s forwards;
+}
+#logoAnime path:nth-child(3) {
+  stroke-dasharray: 100%;
+  stroke-dashoffset: 100%;
+  animation: stroky 0.5s ease 0.6s forwards;
+}
+#logoAnime path:nth-child(4) {
+  stroke-dasharray: 100%;
+  stroke-dashoffset: 100%;
+  animation: stroky 0.5s ease 0.9s forwards;
+}
+#logoAnime path:nth-child(5) {
+  stroke-dasharray: 100%;
+  stroke-dashoffset: 100%;
+  animation: stroky 0.5s ease 1.2s forwards;
+}
+#logoAnime path:nth-child(6) {
+  stroke-dasharray: 100%;
+  stroke-dashoffset: 100%;
+  animation: stroky 0.5s ease 1.5s forwards;
+}
+#logoAnime path:nth-child(7) {
+  stroke-dasharray: 100%;
+  stroke-dashoffset: 100%;
+  animation: stroky 0.5s ease 1.8s forwards;
+}
+@keyframes stroky {
+  to {
+    stroke-dashoffset: 0%;
+  }
+}
+@keyframes fillIn {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: #efefef;
+  }
+}
+@keyframes horizontal {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 100vw;
+  }
+}
+@keyframes vertical {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 100vh;
+  }
+}
+@keyframes hideout {
+  to {
+    display: none;
+  }
+}
